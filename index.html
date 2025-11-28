@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estils.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="nav_bar">
+            <h1 class="logo">DAM1M04-Exercici006</h1>
+            <div class="enlaces">
+            <a href="index.html">Index</a>
+            <a href="interaccio.html">Interaccio</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1>Has ganado un millón de euros</h1>
+        <h3>Introduzca sus datos para recibirlos ahora mismo</h3>
+
+        <form action="">
+            <label for="nom">Nom complet</label>
+            <input type="text" 
+                id="nom" 
+                name="nom"
+                required
+                pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s]{3,40}"
+                title="Introdueix entre 3 i 40 caràcters. Només lletres i espais.">
+
+
+            <label for="email">Correu electrònic</label>
+            <input type="email" id="email" name="email" required>
+
+           <label for="telefon">Telèfon</label>
+           <input type="tel" 
+                id="telefon" 
+                name="telefon" 
+                pattern="(\+34|0034)?[0-9]{9}"
+                title="Format vàlid: 612345678 o +34612345678">
+
+            <label for="edat">Edat</label>
+            <input type="number" 
+                id="edat" 
+                name="edat"
+                min="0"
+                max="90"
+                step="1">
+
+
+            <label for="naixement">Data de naixement</label>
+            <input type="date" 
+                id="naixement" 
+                name="naixement">
+
+            <label for="franja">Franja horària</label>
+            <input type="datetime-local" 
+                id="franja" 
+                name="franja">
+
+
+            <label for="color">Color preferit</label>
+            <input type="color" id="color" name="color">
+
+            <label for="satisfaccio">Nivell de satisfacció</label>
+            <input type="range" id="satisfaccio" name="satisfaccio" min="0" max="10">
+
+            <fieldset>
+            <legend>Aficions</legend>
+                <label><input type="checkbox" name="aficions" value="musica"> Música</label>
+                <label><input type="checkbox" name="aficions" value="esport"> Esport</label>
+                <label><input type="checkbox" name="aficions" value="lectura"> Lectura</label>
+            </fieldset>
+
+            <fieldset>
+            <legend>Nivell d'estudis</legend>
+                <label><input type="radio" name="estudis" value="eso"> ESO</label>
+                <label><input type="radio" name="estudis" value="batxillerat"> Batxillerat</label>
+                <label><input type="radio" name="estudis" value="grau"> Grau</label>
+            </fieldset>
+
+            <label for="pais">País</label>
+            <select id="pais" name="pais">
+                <option>Espanya</option>
+                <option>França</option>
+                <option>Itàlia</option>
+            </select>
+
+            <label for="comentaris">Comentaris</label>
+            <textarea id="comentaris" name="comentaris"></textarea>
+
+            <button type="submit">Enviar</button>
+            <button type="reset">Esborrar</button>
+
+
+
+
+
+
+            
+
+            
+
+        </form>
+
+
+    </main>
+    
+</body>
+</html>
