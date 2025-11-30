@@ -21,7 +21,7 @@
         <h1>Has ganado un millón de euros</h1>
         <h3>Introduzca sus datos para recibirlos ahora mismo</h3>
 
-        <form action="">
+        <form action="" class="formulari">
             <label for="nom">Nom complet</label>
             <input type="text" 
                 id="nom" 
@@ -82,14 +82,20 @@
             </fieldset>
 
             <label for="pais">País</label>
-            <select id="pais" name="pais">
-                <option>Espanya</option>
-                <option>França</option>
-                <option>Itàlia</option>
+            <select id="pais" name="pais" required>
+                <option value="">-- Selecciona un país --</option>
+                <option value="es">Espanya</option>
+                <option value="fr">França</option>
+                <option value="it">Itàlia</option>
             </select>
 
+
             <label for="comentaris">Comentaris</label>
-            <textarea id="comentaris" name="comentaris"></textarea>
+            <textarea id="comentaris" 
+                    name="comentaris" 
+                    rows="4" 
+                    cols="40" 
+                    placeholder="Escriu els teus comentaris aquí..."></textarea>
 
             <button type="submit">Enviar</button>
             <button type="reset">Esborrar</button>
