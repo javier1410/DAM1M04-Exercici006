@@ -33,11 +33,11 @@ header{
     135deg,
     rgba(255, 238, 140, 0.7),
     rgba(251, 176, 231, 0.7));
-
     position: sticky;
      z-index: 10;
     top:0;
     backdrop-filter: blur(10px); /* efecto glass/frosted */
+    border-bottom: 0.7px solid rgba(255, 255, 255, 0.25);
   
 }
 
