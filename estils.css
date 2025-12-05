@@ -202,7 +202,7 @@ button:hover{
 
 
 /*-------------------------------------INTERACCIÓ-------------------------*/
-tab_container input[type="radio"] {
+.tab_container input[type="radio"] {
     display: none;
 }
 
