@@ -19,6 +19,15 @@ header{
     color:white;
 }
 
+.menu_icon {
+    display: none; /* Ocult en escriptori */
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.menu_checkbox {
+    display: none; /* Checkbox ocult sempre */
+}
 a{
 font-size: 1.5rem;
 font-weight: 100;
@@ -371,6 +380,29 @@ body:has(#t3:checked) .tab_botones label[for="t3"] {
 /*-----------------------------------------------------------movil-----------------------------------*//* ░░░ AJUSTES MÓVIL MÍNIMOS Y PRECISOS ░░░ */
 @media (max-width: 768px) {
 
+
+    /* Mostrar icono hamburguesa */
+    .menu_icon {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    /* El menú se oculta por defecto */
+    .enlaces {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    /* Cuando el checkbox está activado se mostrara menú */
+    .menu_checkbox:checked ~ .enlaces {
+        display: flex;
+    }
+
+
+
     /* Cabecera */
     h1 {
         font-size: 2rem;
@@ -379,7 +411,7 @@ body:has(#t3:checked) .tab_botones label[for="t3"] {
 
     /* FORMULARIO */
     .formulari {
-        width: 70%;              /* Antes 35rem */
+        width: 70%;              
         padding: 1rem;
     }
 
@@ -390,8 +422,8 @@ body:has(#t3:checked) .tab_botones label[for="t3"] {
 
     /* TABS — imágenes adaptadas */
     .contenido img {
-        width: 100%;             /* Antes 44rem */
-        height: auto;            /* Antes height fija */
+        width: 100%;             
+        height: auto;            
         border-radius: 12px;
     }
 
@@ -400,11 +432,10 @@ body:has(#t3:checked) .tab_botones label[for="t3"] {
         font-size: 1.1rem;
     }
 
-    /* ░░ CARRUSEL — ajustes esenciales ░░ */
     .carousel {
-        width: 100%;             /* Sustituye el width: 3rem que lo rompe */
-        max-width: 100%;         /* Ocupa todo el ancho del móvil */
-        aspect-ratio: 3/4;       /* Más vertical, encaja mejor en móvil */
+        width: 100%;             
+        max-width: 100%;        
+        aspect-ratio: 3/4;       
         border-radius: 12px;
     }
 
@@ -413,7 +444,7 @@ body:has(#t3:checked) .tab_botones label[for="t3"] {
         object-fit: cover;
     }
 
-    /* Puntos más pequeños */
+  
     .carousel_controls label {
         font-size: 16px;
         padding: 4px;
