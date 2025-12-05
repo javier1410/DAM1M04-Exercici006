@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="estils.css">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 </head>
-<body>
+<body class="interaccio_body">
     <header>
         <div class="nav_bar">
             <h1 class="logo">DAM1M04-Exercici006</h1>
@@ -15,7 +20,62 @@
             <a href="interaccio.html">Interaccio</a>
             </div>
         </div>
-    </header>  
+    </header>
+
+     <h1 class="cake">Seleccionar recompensa</h1>
+
+    
+    <section class="tab_container">
+
+        <input type="radio" id="t1" name="tabs" checked>
+        <input type="radio" id="t2" name="tabs">
+        <input type="radio" id="t3" name="tabs">
+
+        <div class="tab_botones">
+            <label for="t1">Lemon Cake</label>
+            <label for="t2">Strawberry Cake</label>
+            <label for="t3">Chocolate Cake</label>
+        </div>
+    </section>
+
+        <section class="tabs_contenido">
+            
+        <div class="contenido contenido_1">
+        <img src="./assets/tarta-de-queso-de-limon-sobre-la-mesa.jpg" alt="">
+        </div>
+
+        <div class="contenido contenido_2">
+            <img src="./assets/delicioso-pastel-rosa-con-rosas.jpg" alt="">
+        </div>
+
+        <div class="contenido contenido_3">
+         <img src="./assets/pastel-de-chocolate-en-un-plato-negro.jpg" alt="">
+
+        </div>
+    </section>
+
+    
+    <section class="carousel-section">
+    <h1 class="cake">Elige tu tienda de recogida</h2>
+
+    <div class="carousel">
+
+        <input type="radio" id="c1" name="carousel" checked>
+        <input type="radio" id="c2" name="carousel">
+        <input type="radio" id="c3" name="carousel">
+
+        <div class="slide s1">Imatge 1</div>
+        <div class="slide s2">Imatge 2</div>
+        <div class="slide s3">Imatge 3</div>
+
+        <div class="carousel-controls">
+            <label for="c1">●</label>
+            <label for="c2">●</label>
+            <label for="c3">●</label>
+        </div>
+    </div>
+    
+    
     
 </body>
 </html>

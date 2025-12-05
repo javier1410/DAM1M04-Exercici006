@@ -1,48 +1,32 @@
-body {
-    margin-top: 0;
-    font-family:Arial, Helvetica, sans-serif;
-    letter-spacing: 0.1px;
-    animation: fondoColor 10s ease-in-out infinite;
-    font-weight: bold;
+
+  body{
+    background-image: url(/assets/vista-frontal-del-chef-de-reposteria-preparando-pastel-con-chocolate.jpg); 
+    background-size: cover;        
+    background-position: center;   
+   
+     font-family: 'Cormorant Garamond', serif;
+   
     
-}
-
-@keyframes fondoColor {
-  0% {
-    background-color: #ffee8c; /* amarillo pastel */
   }
-
-  50% {
-    background-color: #fbb0e7; /* rosa pastel */
-  }
-
-  100% {
-    background-color: #ffee8c; /* lila suave */
-  }
-
-
-  }
-
-
-
 
 
 header{
-    
-    background: linear-gradient(
-    135deg,
-    rgba(255, 238, 140, 0.7),
-    rgba(251, 176, 231, 0.7));
+    background: rgb(255, 255, 255,0.2);
     position: sticky;
-     z-index: 10;
-    top:0;
+    top: 0;
+
+   
     backdrop-filter: blur(10px); /* efecto glass/frosted */
     border-bottom: 0.7px solid rgba(255, 255, 255, 0.25);
-  
+    color:white;
 }
 
 a{
+font-size: 1.5rem;
+font-weight: 100;
+text-decoration: none; 
 transition: 0.2s ease;
+color: white;
 }
 a:hover{
     transform: scale(1.05);
@@ -58,10 +42,24 @@ a:hover{
     gap: 30px;
 }
 .logo{
-    font-size: 20px;
+    font-size: 1.3rem;
+    font-weight: 200;
 
 }
 
+h1{
+     font-size: 3rem;
+    font-weight: 200;
+    color: white;
+    text-shadow:  0px 0px 5px rgba(255, 255, 255, 0.7);;
+}
+h3{
+     font-size: 1.3rem;
+    font-weight: 100;
+    color: white;
+    text-shadow:  0px 0px 5px rgba(0, 0, 0, 0.7);;
+
+}
 /*-------------------------------------INDEX-------------------------*/
  main{
     display: flex;
@@ -73,10 +71,11 @@ a:hover{
     flex-direction: column;
     width: 35rem;
     background-color: rgb(255, 255, 255);
-    border: black solid;
+    border: rgb(61, 61, 61) solid;
     border-radius: 15px;
     padding: 1rem;
-    box-shadow: 0px 0px 5px rgba(0,0,0,0.4);
+    box-shadow:  0px 0px 5px rgba(255, 255, 255, 1);
+
     gap: 1rem;
  }
 
@@ -91,12 +90,12 @@ a:hover{
 }
 input:hover{
      cursor: pointer;
-     background-color: #eedeff; 
+     background-color: #d5d5d5; 
 
 }
 input:focus {
     outline: none;
-    box-shadow: 0 0 10px #e5d5fe;
+    box-shadow: 0 0 10px #5f5f5f;
     background-color: white;
     transform: scale(1.03);    
 
@@ -153,7 +152,7 @@ select:hover {
 
 select:focus {
     outline: none;
-    box-shadow: 0 0 10px #e5d5fe;
+    box-shadow: 0 0 10px #5f5f5f;
     background-color: white;
     transform: scale(1.03);
 }
@@ -199,4 +198,100 @@ button:hover{
     transform: scale(1.03);
     background-color: #eedeff; 
 
+}
+
+
+/*-------------------------------------INTERACCIÓ-------------------------*/
+input[type="radio"] {
+    display: none;
+}
+    
+.tab_botones {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.tab_botones label {
+    display: flex;          
+    justify-content: center; 
+    align-items: center;    
+    padding: 1.25rem 2.50rem;
+    color: white;
+    background: rgb(238, 238, 238,0.1);
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 3rem;
+
+    font-size: 1.5rem;
+    font-weight: 200;
+    text-shadow: 0px 0px 5px rgb(255, 255, 255, 0.2);
+}
+
+.cake{
+    display: flex;
+    justify-content: center;
+    margin-bottom:3rem ;
+}
+
+.tab_botones label:hover {
+ transform: scale(1.1);
+}
+.contenido { /* hacemos desaparecer  el contenido*/
+    display: none;
+    margin: 0;
+   text-align: center;
+
+    
+    
+}
+.contenido img {
+    width: 44rem;       
+    height: 22rem;
+    object-fit: cover;  /* se ajusta sin deformarse */
+    border-radius: 18px;
+   
+
+}
+
+.contenido_1 img{
+    box-shadow: 0px 0px 10px rgba(255, 250, 184, 0.5);
+}
+.contenido_2 img{
+    box-shadow: 0px 0px 10px rgba(244, 78, 208, 0.5);
+}
+
+.contenido_3 img{
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+
+
+
+/*conectar cada radio con su contenido*/
+body:has(#t1:checked) .contenido_1 {
+    display: block;
+}
+
+body:has(#t2:checked) .contenido_2 {
+    display: block;
+}
+
+body:has(#t3:checked) .contenido_3 {
+    display: block;
+}
+
+/*cambiar de color cuando  esta seleccionado*/
+
+body:has(#t1:checked) .tab_botones label[for="t1"],
+body:has(#t2:checked) .tab_botones label[for="t2"],
+body:has(#t3:checked) .tab_botones label[for="t3"] {
+    background: white;
+    color: black;
+    border-bottom: 1px solid white;
+    font-weight: bold;
+}
+
+.tabs_contenido{
+    margin-bottom: 3rem;
 }
