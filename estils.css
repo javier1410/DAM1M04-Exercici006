@@ -202,10 +202,10 @@ button:hover{
 
 
 /*-------------------------------------INTERACCIÓ-------------------------*/
-input[type="radio"] {
+tab_container input[type="radio"] {
     display: none;
 }
-    
+
 .tab_botones {
     display: flex;
     justify-content: space-around;
